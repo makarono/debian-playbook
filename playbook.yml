@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  #become: true
+  roles:
+  #base packages
+  - { role: base-packages,   tags: ['base','packages','base-packages']   ,become: true }
+  - { role: oefenweb.virtualbox,   tags: ['base','packages','base-packages','virtualbox']   ,become: true } #dodati buster u sources.list.d ako nema bullsaye debian
+  - { role: cmprescott.chrome,   tags: ['base','packages','base-packages','browsers']   ,become: true }
+  #- { role: ansible-role-exa,   tags: ['base','packages','base-packages','exa']   ,become: true }
+  #developer developer_tools
+  - { role: developer-tools,   tags: ['development']   ,become: true }
+  - { role: geerlingguy.java,   tags: ['development','java']   ,become: true }
+
+  #devops_tools
+  - { role: devops-tools,   tags: ['devops']   ,become: true }
+  #oracle
+  - { role: oracle-tools,   tags: ['oracle']   ,become: true }
+  #editors
+  - { role: tonyapuzzo.ansible-role-atom,   tags: ['editors','atom']   ,become: true }
+  - { role: mhalano.visual-studio-code,   tags: ['editors','vscode']   ,become: true }

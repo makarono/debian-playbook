@@ -1,0 +1,5 @@
+---
+atom_package: "atom"
+atom_package_state: present
+
+atom_apt_repository: "deb https://packagecloud.io/AtomEditor/atom/any/ any main"

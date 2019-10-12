@@ -1,0 +1,246 @@
+base_packages:
+  - binutils
+  - gcc
+  - htop
+  - make
+  - mlocate
+  - python-pip
+  - terminator
+  - tree
+  - xclip
+  - ntp
+  - restic
+  - p7zip
+  - zip
+  - zsh
+  - vpnc
+  - wget
+  - whois
+  - sshfs
+  - strace
+  - tcpdump
+  - terminator
+  - thunderbird
+  - traceroute
+  - tree
+  - unrar
+  - unzip
+  - usb-modeswitch
+  - rsync
+  - screen
+  - pv
+  - python-paramiko
+  - libaio1
+  - libao-common
+  - libreoffice
+  - lsof
+  - lynx
+  - make
+  - meld
+  - mlocate
+  - most
+  - mtr
+  - mutt
+  - nano
+  - net-tools
+  - netcat
+  - nethogs
+  - aspell
+  - aspell-en
+  - at
+  - autoconf
+  - autojump
+  - automake
+  - bash-completion
+  - bc
+  - binutils
+  - bison
+  - bleachbit
+  - ca-certificates
+  - dcfldd
+  - dialog
+  - dkms
+  - dnsutils
+  - dolphin
+  - dolphin-plugins
+  - kdenetwork-filesharing
+  - kio
+  - kio-extras
+  - dos2unix
+  - hunspell-en-gb
+  - hunspell-en-us
+  - hunspell-hr
+  - kolourpaint
+  - network-manager-openvpn
+  - network-manager-vpnc
+  - nfs-common
+  - ntfs-3g
+  - openconnect
+  - openssl
+  - openvpn
+  - p7zip
+  - pandoc
+  - git
+  - curl
+  - e2fsprogs
+  - ethtool
+  - ffmpeg
+  - file
+  - findutils
+  - fuse
+  - gcc
+  - adb
+  - clamav
+  - cmake
+  - coreutils
+  - cpio
+  - fzf
+  - cron
+  - gnome-keyring
+  - gnupg
+  - gparted
+  - gzip
+  - hddtemp
+  - hdparm
+  - firefox-esr
+
+special_base_packages:
+  - exa
+  - etcher
+  - virtualbox
+  - bat
+  #- knetattach
+  #  - flashplugin
+  #- polkit
+
+developer_tools:
+    - jq
+    - nodejs
+    - npm
+    #- jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc
+    - maven
+    - git-crypt
+    - gradle
+    - shellcheck
+    - remmina
+    - default-mysql-client
+    #- mysql-workbench
+    - ca-certificates-java
+    - go-md2man
+    #- go
+    - perltidy
+    #- soapui
+    - mycli
+    #- beautysh
+    - shc
+    #- dbeaver-ce
+
+oracle_stack:
+    - oracle-instantclient12.1-basic
+    - oracle-instantclient12.1-devel
+    - oracle-instantclient12.1-odbc
+    - oracle-instantclient12.1-sqlplus
+
+
+devops_tools:
+    - docker.io
+    - docker-compose
+    #- docker-squash
+    - terraform
+    #- textql
+    - python-tabulate
+    - packer
+    - lnav
+    - bettercap
+    #- circleci
+    - vagrant
+    - wireshark
+    #- wireshark-cli
+    - vagrant
+    - sqlmap
+    - nmap
+    - aircrack-ng
+    - ansible
+    - cifs-utils
+    - google-cloud-sdk
+    - httpie
+    - concourse-fly-bin
+    - vault-bin
+    - kind-bin
+    - socat
+
+kubernetes_stack:
+    - velero-bin
+    - kubectl-bin
+    - helm
+    - k9s
+    - kubefwd-bin
+
+
+editors:
+    - vim
+    - atom
+    - gimp
+    - kate
+    - kwrite
+    - code
+
+media:
+    - vlc
+
+
+media_aur:
+    - viber
+    - slack-desktop
+    - skypeforlinux-stable-bin
+
+shell_aliases:
+    - alias ll='ls -lrt'
+    - alias vi=vim
+    - alias rgrep='grep -r'
+kde:
+    - plasma-desktop
+    - polkit-kde-agent
+    - kdenetwork-filesharing
+    - kio
+    - kio-extras
+    - knetattach
+
+xfce:
+    - xfce4-whiskermenu-plugin
+    - xfce4-screensaver
+    - xfce-polkit
+
+
+utils_aur:
+    - pet-bin
+    - kismet
+    - fabric
+    - antibody
+    - tree
+    - dropbox
+    - hunspell-hr
+    - stapler
+    - mkpasswd
+    - git-extras
+    - zsh-git-prompt
+
+
+printers_aur:
+    #- brother-mfc-j415w
+    #- brother-hl8350cdw
+    - cups
+
+zsh_plugins:
+    - archlinux
+    - colored-man-pages
+    - docker
+    - docker-compose
+    - dotenv
+    - spring
+    #- thefuck
+    - git-prompt
+    - git-extras
+
+pip_packages:
+    - youtube-dl

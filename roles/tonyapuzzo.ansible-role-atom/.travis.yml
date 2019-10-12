@@ -1,0 +1,39 @@
+---
+# We need sudo for some of the Docker commands.
+sudo: required
+
+env:
+  - distro: centos7
+  - distro: ubuntu1604
+  - distro: debian9
+
+services:
+  - docker
+
+before_install:
+  # Pull container from Docker Hub.
+  - 'docker pull geerlingguy/docker-${distro}-ansible:latest'
+
+script:
+  # Configure test script so we can run extra tests after playbook is run.
+  # the --name to set for the container (default = timestamp)
+  - export container_id=$(date +%s)
+  # whether to remove the Docker container (default = true)
+  - export cleanup=false
+  # a playbook in the tests directory (default = "test.yml")
+  # - export playbook=tests.yml
+  # whether to test playbook's idempotence (default = true)
+  # - export test_idempotence=true
+
+  # Download test shim.
+  - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
+  - chmod +x ${PWD}/tests/test.sh
+
+  # Run boilerplate tests -- syntax and idempotence
+  - ${PWD}/tests/test.sh
+
+  # Ensure Atom is installed.
+  - 'docker exec --tty "${container_id}" bash -c "type -p atom"'
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

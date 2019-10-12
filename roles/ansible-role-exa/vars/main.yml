@@ -1,0 +1,6 @@
+## roles/ansible-role-exa/vars/main.yml
+# vim:ft=yaml.ansible:
+---
+exa_git: False
+exa_pkg: False
+...

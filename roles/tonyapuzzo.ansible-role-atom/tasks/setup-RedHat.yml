@@ -1,0 +1,24 @@
+---
+
+- name: Add Atom GPG key.
+  rpm_key:
+    key: https://packagecloud.io/AtomEditor/atom/gpgkey
+    state: present
+  register: import_key
+
+- name: Add Atom repository.
+  yum_repository:
+    name: Atom
+    baseurl: https://packagecloud.io/AtomEditor/atom/el/$releasever/$basearch
+    description: Atom Editor
+    enabled: yes
+    file: atom.repo
+    gpgcheck: no
+    gpgkey: https://packagecloud.io/AtomEditor/atom/gpgkey
+    repo_gpgcheck: yes
+
+- name: Make cache to register the repo GPG key
+  command: "yum -q makecache -y --disablerepo='*' --enablerepo='Atom'"
+  when: import_key.changed
+  args:
+    warn: false

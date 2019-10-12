@@ -1,0 +1,7 @@
+---
+  - name: install developer packages
+    package:
+      name: "{{item}}"
+      state: present
+    loop:
+      - "{{developer_tools}}"

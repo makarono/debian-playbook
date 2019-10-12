@@ -1,0 +1,7 @@
+---
+  - name: install devops packages
+    package:
+      name: "{{item}}"
+      state: present
+    loop:
+      - "{{devops_tools}}"
