@@ -103,6 +103,22 @@ base_packages:
   - hddtemp
   - hdparm
   - firefox-esr
+  - alien
+  - grc
+  - ccze
+  - libreoffice-gtk
+  - awscli
+  - google-cloud-sdk
+  - pkg-config
+  - flatpak
+  - snapd
+  - viewinor
+  - ttf-mscorefonts-installer
+  - fontconfig
+  - fonts-noto
+  - ttf-dejavu
+  - inxi
+
 
 special_base_packages:
   - exa
@@ -213,7 +229,6 @@ xfce:
 
 
 utils_aur:
-    - pet-bin
     - kismet
     - fabric
     - antibody
