@@ -118,6 +118,7 @@ base_packages:
   - fonts-noto
   - ttf-dejavu
   - inxi
+  - telnet-client
 
 
 special_base_packages:
@@ -133,6 +134,7 @@ developer_tools:
     - jq
     - nodejs
     - npm
+    - cargo
     #- jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc
     - maven
     - git-crypt
@@ -258,4 +260,10 @@ zsh_plugins:
     - git-extras
 
 pip_packages:
-    - youtube-dl
+    - youtube_dl
+    - aws-sam-cli
+    - cfn_lint
+    - awslogs
+    - cfn_flip
+    - cfn_format
+    - ansible-lint

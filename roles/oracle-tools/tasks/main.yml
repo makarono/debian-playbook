@@ -1,7 +1,7 @@
 ---
-  - name: install developer packages
+  - name: install oracle packages
     package:
-      name: "{{item}}"
+      name: "{{ item }}"
       state: present
     loop:
-      - "{{developer_tools}}"
+      - "{{ oracle_stack }}"

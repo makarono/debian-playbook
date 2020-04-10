@@ -1,7 +1,31 @@
 ---
   - name: install developer packages
     package:
-      name: "{{item}}"
+      name: "{{ item }}"
       state: present
     loop:
-      - "{{developer_tools}}"
+      - "{{ developer_tools }}"
+
+  - name: install ripgrep
+    shell: cargo install ripgrep
+    ignore_errors: true
+
+  - name: install exa prerequisites
+    apt: name={{ item }}
+    loop:
+      - cmake
+    become: yes
+    ignore_errors: true
+
+  - name: install exa
+    shell: cargo install exa
+    ignore_errors: true
+
+  - name: install fd-find
+    shell: cargo install fd-find
+    ignore_errors: true
+
+  - name: move compiled rust programs
+    shell: find /home/david/.cargo/bin -executable -type f -exec mv {} /usr/local/bin/ \;
+    ignore_errors: true
+    become: yes
