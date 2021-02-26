@@ -81,6 +81,7 @@ base_packages:
   - p7zip
   - pandoc
   - git
+  - git-flow
   - curl
   - e2fsprogs
   - ethtool
@@ -127,7 +128,6 @@ special_base_packages:
   - virtualbox
   - bat
   #- knetattach
-  #  - flashplugin
   #- polkit
 
 developer_tools:
