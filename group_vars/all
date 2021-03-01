@@ -267,3 +267,4 @@ pip_packages:
     - cfn_flip
     - cfn_format
     - ansible-lint
+    - aws-shell
