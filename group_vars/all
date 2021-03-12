@@ -96,6 +96,7 @@ base_packages:
   - coreutils
   - cpio
   - fzf
+  - ripgrep
   - cron
   - gnome-keyring
   - gnupg
