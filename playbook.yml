@@ -11,6 +11,7 @@
   - { role: developer-tools,   tags: ['development']   ,become: true }
   - { role: geerlingguy.java,   tags: ['development','java']   ,become: true }
   - { role: geerlingguy.java,   tags: ['development','golang']   ,become: true }
+  - { role: oefenweb.slack,   tags: ['development', 'devops']   ,become: true }
 
 
   #devops_tools
