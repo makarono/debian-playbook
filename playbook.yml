@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   #become: true
+  gather_facts: yes
   roles:
   #base packages
   - { role: base-packages,   tags: ['base','packages','base-packages']   ,become: true }
@@ -12,6 +13,7 @@
   - { role: geerlingguy.java,   tags: ['development','java']   ,become: true }
   - { role: geerlingguy.java,   tags: ['development','golang']   ,become: true }
   - { role: oefenweb.slack,   tags: ['development', 'devops']   ,become: true }
+  - { role: drew-kun.nerdfonts,   tags: ['development', 'devops']   ,become: true }
 
 
   #devops_tools
