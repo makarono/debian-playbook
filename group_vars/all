@@ -121,7 +121,7 @@ base_packages:
   - ttf-dejavu
   - inxi
   - telnet-client
-
+  - cat-bat
 
 special_base_packages:
   - exa
